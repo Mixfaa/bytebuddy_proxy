@@ -16,6 +16,7 @@ dependencies {
 
 java {
     withSourcesJar()
+    version = JavaVersion.VERSION_17
 }
 
 publishing {
