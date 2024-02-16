@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.Mixfaa"
-version = "1.4-SNAPSHOT"
+version = "1.1-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -13,3 +13,20 @@ repositories {
 dependencies {
     implementation("net.bytebuddy:byte-buddy:1.14.12+")
 }
+
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
+publishing {
+
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
+        }
+    }
+}
+
+
+
