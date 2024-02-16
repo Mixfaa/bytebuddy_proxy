@@ -31,30 +31,6 @@ public final class MethodInterceptionDescription {
         return beforeSuper;
     }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (MethodInterceptionDescription) obj;
-        return Objects.equals(this.matcher, that.matcher) &&
-                Objects.equals(this.implementation, that.implementation) &&
-                this.beforeSuper == that.beforeSuper;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(matcher, implementation, beforeSuper);
-    }
-
-    @Override
-    public String toString() {
-        return "MethodInterceptionDescription[" +
-                "matcher=" + matcher + ", " +
-                "implementation=" + implementation + ", " +
-                "beforeSuper=" + beforeSuper + ']';
-    }
-
-
     public static class Builder {
         private ElementMatcher<MethodDescription> matcher;
         private Implementation.Composable implementation;
