@@ -23,6 +23,12 @@ public class ClassInstanceBuilder<T> {
      */
     private ClassInstanceBuilder(Class<T> clazz) {
         this.clazz = clazz;
+        try {
+            this.constructor = clazz.getConstructor();
+        }
+        catch (NoSuchMethodException ignored) {
+           this.constructor = null;
+        }
     }
 
     /**
