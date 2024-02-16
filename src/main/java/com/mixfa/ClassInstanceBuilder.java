@@ -13,7 +13,7 @@ import java.util.Objects;
  */
 public class ClassInstanceBuilder<T> {
     private final Class<T> clazz;
-    private final Map<String, Objects> fieldsToSet = new HashMap<>();
+    private final Map<String, Object> fieldsToSet = new HashMap<>();
     private Constructor<T> constructor = null;
 
     /**
@@ -76,10 +76,10 @@ public class ClassInstanceBuilder<T> {
      * @param args constructor args
      * @return instance
      */
-    public T newInstance(Objects... args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
-        T instance = constructor.newInstance((Object[]) args);
+    public T newInstance(Object... args) throws InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+        T instance = constructor.newInstance(args);
 
-        for (Map.Entry<String, Objects> entry : fieldsToSet.entrySet()) {
+        for (Map.Entry<String, Object> entry : fieldsToSet.entrySet()) {
             var fieldName = entry.getKey();
             var value = entry.getValue();
 

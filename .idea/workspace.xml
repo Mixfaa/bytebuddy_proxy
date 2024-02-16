@@ -82,7 +82,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.bytebuddy_proxy [build]">
+  <component name="RunManager" selected="Gradle.bytebuddy_proxy [clean]">
     <configuration name="bytebuddy_proxy [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -195,9 +195,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.bytebuddy_proxy [clean]" />
         <item itemvalue="Gradle.bytebuddy_proxy [build]" />
         <item itemvalue="Gradle.bytebuddy_proxy [publishToMavenLocal]" />
-        <item itemvalue="Gradle.bytebuddy_proxy [clean]" />
         <item itemvalue="Gradle.bytebuddy_proxy [classes]" />
         <item itemvalue="Gradle.bytebuddy_proxy [publish]" />
       </list>
