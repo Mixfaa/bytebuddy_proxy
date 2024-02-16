@@ -8,6 +8,7 @@ import java.util.Objects;
 
 /**
  * Helper class for producing instances
+ *
  * @param <T> Class type
  */
 public class ClassInstanceBuilder<T> {
@@ -17,6 +18,7 @@ public class ClassInstanceBuilder<T> {
 
     /**
      * Constructor
+     *
      * @param clazz java class of target type
      */
     private ClassInstanceBuilder(Class<T> clazz) {
@@ -25,7 +27,8 @@ public class ClassInstanceBuilder<T> {
 
     /**
      * Constructor
-     * @param clazz java class of target type
+     *
+     * @param clazz           java class of target type
      * @param constructorArgs constructor args types
      */
     public ClassInstanceBuilder(Class<T> clazz, Class<?>... constructorArgs) throws NoSuchMethodException {
@@ -35,17 +38,19 @@ public class ClassInstanceBuilder<T> {
 
     /**
      * selects constructor
+     *
      * @param argsTypes constructor args types
      */
-    public ClassInstanceBuilder<T> selectConstructor(Class<?> argsTypes) throws NoSuchMethodException {
+    public ClassInstanceBuilder<T> selectConstructor(Class<?>... argsTypes) throws NoSuchMethodException {
         this.constructor = clazz.getConstructor(argsTypes);
         return this;
     }
 
     /**
      * set field value after instance creation
+     *
      * @param fieldName field name
-     * @param value field value
+     * @param value     field value
      */
     public ClassInstanceBuilder<T> withField(String fieldName, Objects value) {
         fieldsToSet.put(fieldName, value);
@@ -61,6 +66,7 @@ public class ClassInstanceBuilder<T> {
 
     /**
      * creates new instance
+     *
      * @param args constructor args
      * @return instance
      */
