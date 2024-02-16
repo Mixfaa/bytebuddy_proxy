@@ -59,9 +59,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2cSF1WvD5eFblw7FmEOwRfP5Uji" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -70,8 +70,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.bytebuddy_proxy [build].executor": "Run",
+    "Gradle.bytebuddy_proxy [classes].executor": "Run",
     "Gradle.bytebuddy_proxy [clean].executor": "Run",
     "Gradle.bytebuddy_proxy [publishAllPublicationsToGitHubPackagesRepository].executor": "Run",
+    "Gradle.bytebuddy_proxy [publishToMavenLocal].executor": "Run",
     "Gradle.bytebuddy_proxy [publish].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -80,7 +82,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.bytebuddy_proxy [publish]">
+  <component name="RunManager" selected="Gradle.bytebuddy_proxy [build]">
     <configuration name="bytebuddy_proxy [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -93,6 +95,28 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="bytebuddy_proxy [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="classes" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +149,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="bytebuddy_proxy [publishAllPublicationsToGitHubPackagesRepository]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="bytebuddy_proxy [publishToMavenLocal]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +160,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishAllPublicationsToGitHubPackagesRepository" />
+            <option value="publishToMavenLocal" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -171,10 +195,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.bytebuddy_proxy [publish]" />
         <item itemvalue="Gradle.bytebuddy_proxy [build]" />
+        <item itemvalue="Gradle.bytebuddy_proxy [publishToMavenLocal]" />
         <item itemvalue="Gradle.bytebuddy_proxy [clean]" />
-        <item itemvalue="Gradle.bytebuddy_proxy [publishAllPublicationsToGitHubPackagesRepository]" />
+        <item itemvalue="Gradle.bytebuddy_proxy [classes]" />
+        <item itemvalue="Gradle.bytebuddy_proxy [publish]" />
       </list>
     </recent_temporary>
   </component>
