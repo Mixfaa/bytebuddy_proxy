@@ -67,21 +67,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.bytebuddy_proxy [build].executor": "Run",
-    "Gradle.bytebuddy_proxy [classes].executor": "Run",
-    "Gradle.bytebuddy_proxy [clean].executor": "Run",
-    "Gradle.bytebuddy_proxy [publishAllPublicationsToGitHubPackagesRepository].executor": "Run",
-    "Gradle.bytebuddy_proxy [publishToMavenLocal].executor": "Run",
-    "Gradle.bytebuddy_proxy [publish].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.bytebuddy_proxy [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.bytebuddy_proxy [classes].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.bytebuddy_proxy [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.bytebuddy_proxy [publishAllPublicationsToGitHubPackagesRepository].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.bytebuddy_proxy [publishToMavenLocal].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.bytebuddy_proxy [publish].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Gradle.bytebuddy_proxy [build]">
     <configuration name="bytebuddy_proxy [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
