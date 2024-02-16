@@ -1,8 +1,9 @@
 plugins {
     id("java")
+    id("maven-publish")
 }
 
-group = "com.mixfa"
+group = "com.github.Mixfaa"
 version = "1.4-SNAPSHOT"
 
 repositories {
