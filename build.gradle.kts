@@ -12,6 +12,13 @@ repositories {
 
 dependencies {
     implementation("net.bytebuddy:byte-buddy:1.14.12")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.1")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.1")
+}
+
+tasks.named<Test>("test") {
+    useJUnitPlatform()
 }
 
 java {

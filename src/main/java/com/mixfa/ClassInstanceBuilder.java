@@ -14,22 +14,7 @@ import java.util.Objects;
 public class ClassInstanceBuilder<T> {
     private final Class<T> clazz;
     private final Map<String, Object> fieldsToSet = new HashMap<>();
-    private Constructor<T> constructor = null;
-
-    /**
-     * Constructor
-     *
-     * @param clazz java class of target type
-     */
-    private ClassInstanceBuilder(Class<T> clazz) {
-        this.clazz = clazz;
-        try {
-            this.constructor = clazz.getConstructor();
-        }
-        catch (NoSuchMethodException ignored) {
-           this.constructor = null;
-        }
-    }
+    private Constructor<T> constructor;
 
     /**
      * Constructor
@@ -37,9 +22,14 @@ public class ClassInstanceBuilder<T> {
      * @param clazz           java class of target type
      * @param constructorArgs constructor args types
      */
-    public ClassInstanceBuilder(Class<T> clazz, Class<?>... constructorArgs) throws NoSuchMethodException {
+    public ClassInstanceBuilder(Class<T> clazz, Class<?>... constructorArgs) {
         this.clazz = clazz;
-        this.constructor = clazz.getConstructor(constructorArgs);
+        try {
+            this.constructor = clazz.getConstructor(constructorArgs);
+        }
+        catch (Exception ignored) {
+            this.constructor = null;
+        }
     }
 
     /**
