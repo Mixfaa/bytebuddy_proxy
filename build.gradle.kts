@@ -16,13 +16,12 @@ dependencies {
 
 java {
     withSourcesJar()
-    withJavadocJar()
 }
 
 publishing {
 
     publications {
-        register<MavenPublication>("gpr") {
+        register<MavenPublication>("bytebuddy_proxy") {
             from(components["java"])
         }
     }
