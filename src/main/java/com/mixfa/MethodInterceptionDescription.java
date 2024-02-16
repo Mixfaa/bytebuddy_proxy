@@ -14,17 +14,17 @@ public record MethodInterceptionDescription(ElementMatcher<MethodDescription> ma
         private boolean beforeSuper = false;
 
         @SuppressWarnings("unchecked")
-        public final Builder withMatchers(ElementMatcher<MethodDescription>... matchers) {
+        public final Builder matchers(ElementMatcher<MethodDescription>... matchers) {
             this.matcher = new ElementMatcher.Junction.Conjunction<>(matchers);
             return this;
         }
 
-        public Builder withMatcher(ElementMatcher<MethodDescription> matcher) {
+        public Builder matcher(ElementMatcher<MethodDescription> matcher) {
             this.matcher = matcher;
             return this;
         }
 
-        public Builder withImplementation(Implementation.Composable implementation) {
+        public Builder implementation(Implementation.Composable implementation) {
             this.implementation = implementation;
             return this;
         }

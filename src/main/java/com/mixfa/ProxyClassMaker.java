@@ -13,6 +13,12 @@ import java.util.Map;
 import java.util.function.Function;
 
 public class ProxyClassMaker {
+    private ProxyClassMaker() {}
+
+    public static <T> Class<? extends T> makeProxyClass(Class<T> clazz, List<MethodInterceptionDescription> interceptions) {
+        return makeProxyClass(clazz, interceptions, null);
+    }
+
     public static <T> Class<? extends T> makeProxyClass(
             Class<T> clazz,
             List<MethodInterceptionDescription> interceptions,
