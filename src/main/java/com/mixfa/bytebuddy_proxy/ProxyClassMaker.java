@@ -1,4 +1,4 @@
-package com.mixfa;
+package com.mixfa.bytebuddy_proxy;
 
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.description.method.MethodDescription;

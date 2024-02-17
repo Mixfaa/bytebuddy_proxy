@@ -1,4 +1,4 @@
-package com.mixfa;
+package com.mixfa.bytebuddy_proxy;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

@@ -1,10 +1,8 @@
-package com.mixfa;
+package com.mixfa.bytebuddy_proxy;
 
 import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.matcher.ElementMatcher;
-
-import java.util.Objects;
 
 public final class MethodInterceptionDescription {
     private final ElementMatcher<MethodDescription> matcher;

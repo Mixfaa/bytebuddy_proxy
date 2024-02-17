@@ -1,6 +1,6 @@
-import com.mixfa.ClassInstanceBuilder;
-import com.mixfa.MethodInterceptionDescription;
-import com.mixfa.ProxyClassMaker;
+import com.mixfa.bytebuddy_proxy.ClassInstanceBuilder;
+import com.mixfa.bytebuddy_proxy.MethodInterceptionDescription;
+import com.mixfa.bytebuddy_proxy.ProxyClassMaker;
 import model.Client;
 import net.bytebuddy.description.modifier.Visibility;
 import net.bytebuddy.implementation.MethodCall;
