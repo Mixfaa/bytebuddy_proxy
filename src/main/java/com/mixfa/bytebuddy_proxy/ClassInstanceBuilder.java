@@ -55,8 +55,9 @@ public class ClassInstanceBuilder<T> {
     /**
      * cleares fields
      */
-    public void clearFields() {
+    public ClassInstanceBuilder<T> clearFields() {
         fieldsToSet.clear();
+        return this;
     }
 
     /**
