@@ -2,6 +2,7 @@ import com.mixfa.ClassInstanceBuilder;
 import com.mixfa.MethodInterceptionDescription;
 import com.mixfa.ProxyClassMaker;
 import model.Client;
+import net.bytebuddy.description.modifier.Visibility;
 import net.bytebuddy.implementation.MethodCall;
 import net.bytebuddy.matcher.ElementMatchers;
 import org.junit.jupiter.api.Assertions;
@@ -36,14 +37,17 @@ public class SimpleTest {
 
         var interceptions = List.of(sendInterception, receiveInterception);
 
-        var proxyClass = ProxyClassMaker.makeProxyClass(Client.class, interceptions);
+        var proxyClass = ProxyClassMaker.makeProxyClass(Client.class, interceptions, (bb) -> bb.defineField("_field", String.class, Visibility.PUBLIC));
         var object = new ClassInstanceBuilder<>(proxyClass)
                 .selectConstructor(int.class)
+                .withField("_field","my little field")
                 .newInstance(123);
 
         object.send("send");
         object.receive("receive");
 
-        Assertions.assertTrue(_send.equals("send") && _receive.equals("receive"));
+        var fieldVal = object.getClass().getDeclaredField("_field").get(object);
+
+        Assertions.assertTrue(fieldVal.equals("my little field") && _send.equals("send") && _receive.equals("receive"));
     }
 }

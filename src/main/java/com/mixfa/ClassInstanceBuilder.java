@@ -4,7 +4,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * Helper class for producing instances
@@ -48,7 +47,7 @@ public class ClassInstanceBuilder<T> {
      * @param fieldName field name
      * @param value     field value
      */
-    public ClassInstanceBuilder<T> withField(String fieldName, Objects value) {
+    public ClassInstanceBuilder<T> withField(String fieldName, Object value) {
         fieldsToSet.put(fieldName, value);
         return this;
     }
