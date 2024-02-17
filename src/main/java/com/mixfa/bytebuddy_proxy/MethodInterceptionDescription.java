@@ -4,6 +4,8 @@ import net.bytebuddy.description.method.MethodDescription;
 import net.bytebuddy.implementation.Implementation;
 import net.bytebuddy.matcher.ElementMatcher;
 
+import java.util.List;
+
 public final class MethodInterceptionDescription {
     private final ElementMatcher<MethodDescription> matcher;
     private final Implementation.Composable implementation;
@@ -35,17 +37,17 @@ public final class MethodInterceptionDescription {
         private boolean beforeSuper = false;
 
         @SuppressWarnings("unchecked")
-        public final Builder matchers(ElementMatcher<MethodDescription>... matchers) {
+        public final Builder setMatchers(ElementMatcher<MethodDescription>... matchers) {
             this.matcher = new ElementMatcher.Junction.Conjunction<>(matchers);
             return this;
         }
 
-        public Builder matcher(ElementMatcher<MethodDescription> matcher) {
+        public Builder setMatcher(ElementMatcher<MethodDescription> matcher) {
             this.matcher = matcher;
             return this;
         }
 
-        public Builder implementation(Implementation.Composable implementation) {
+        public Builder setImlp(Implementation.Composable implementation) {
             this.implementation = implementation;
             return this;
         }

@@ -23,12 +23,12 @@ public class SimpleTest {
     void test1() throws Throwable {
 
         var sendInterception = new MethodInterceptionDescription.Builder()
-                .matcher(ElementMatchers.named("send"))
-                .implementation(MethodCall.run(() -> _send = "send")).build();
+                .setMatcher(ElementMatchers.named("send"))
+                .setImlp(MethodCall.run(() -> _send = "send")).build();
 
         var receiveInterception = new MethodInterceptionDescription.Builder()
-                .matcher(ElementMatchers.named("receive"))
-                .implementation(MethodCall.invoke(
+                .setMatcher(ElementMatchers.named("receive"))
+                .setImlp(MethodCall.invoke(
                                 SimpleTest.class.getMethod("receiveIntercepted", Client.class, String.class))
                         .withThis()
                         .withAllArguments()
