@@ -22,11 +22,9 @@ public final class MethodInterceptionDescription {
     public ElementMatcher<MethodDescription> matcher() {
         return matcher;
     }
-
     public Implementation.Composable implementation() {
         return implementation;
     }
-
     public boolean beforeSuper() {
         return beforeSuper;
     }
