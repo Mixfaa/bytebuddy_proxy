@@ -1,6 +1,18 @@
 # Simple proxy lib for building static proxy classes
 uses bytebuddy as class generator
 
+Usage:
+```java
+repositories {
+        mavenCentral()
+        maven {
+                url = uri("https://jitpack.io")
+        }
+        }
+
+        implementation("net.bytebuddy:byte-buddy:LAST_RELEASE_TAG")
+```
+
 Example:
 
 defining method interceptions:
