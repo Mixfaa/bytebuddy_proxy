@@ -22,7 +22,7 @@ public class ProxyClassMaker {
     public static <T> Class<? extends T> makeProxyClass(
             Class<T> clazz,
             List<MethodInterceptionDescription> interceptions,
-            Function<DynamicType.Builder<T>, DynamicType.Builder<T>> configuration
+            Function<DynamicType.Builder<? extends T>, DynamicType.Builder<? extends T>> configuration
     ) {
         Map<MethodDescription, Implementation.Composable> methodInterceptions = new HashMap<>();
         for (java.lang.reflect.Method method : clazz.getDeclaredMethods()) {
@@ -44,7 +44,7 @@ public class ProxyClassMaker {
             }
         }
 
-        DynamicType.Builder<T> bbBuilder = new ByteBuddy().subclass(clazz);
+        DynamicType.Builder<? extends T> bbBuilder = new ByteBuddy().subclass(clazz);
 
         if (configuration != null)
             bbBuilder = configuration.apply(bbBuilder);
